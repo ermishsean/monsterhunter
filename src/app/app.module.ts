@@ -6,12 +6,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { MonstermenuComponent } from './components/monstermenu/monstermenu.component';
 import { YoutubeComponent } from './components/youtube/youtube.component';
+import { SpecificmonsterComponent } from './components/specificmonster/specificmonster.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MonstermenuComponent,
-    YoutubeComponent
+    YoutubeComponent,
+    SpecificmonsterComponent
   ],
   imports: [
     BrowserModule,

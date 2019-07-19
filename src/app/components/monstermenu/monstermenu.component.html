@@ -1,28 +1,30 @@
-<table>
-    <tr>
-        <th>Id</th>
-        <th>Name</th>
-        <th>Monster type</th>
-        <th>Species</th>
-        <th>Description</th>
-        <th>Elements</th>
-        <th>Ailments</th>
-        <th>Locations</th>
-        <th>Resistances</th>
-        <th>Weakness</th>
-        <th>Rewards</th>
-    </tr>
-    <tr *ngFor = "let monster of monsters">
-            <td>{{monster.id}}</td>
-            <td>{{monster.name}}</td>
-            <td>{{monster.type}}</td>
+<style>
+        #container{
+            width: 100%;
+            animation-name: none;
+        }
+        #monsterdiv:hover{
+            transform: scale(1.5);
+        }
+        div.monster { border: solid black 1px; display: inline-block; background-color: white }
+</style>
+
+<!-- <table>
+    <tr *ngFor = "let monster of monsters; let i = index">
+            <td><img style="width: 200px; height: 200px;" src="/assets/{{monster.id}}.png"><br>{{monster.name}}</td>
+             <td>{{monster.type}}</td>
             <td>{{monster.species}}</td>
             <td>{{monster.description}}</td>
             <td>{{monster.elements}}</td>
-            <td *ngFor = "let ailment of monster.ailments">{{ailment.description}}</td>
-            <td *ngFor = "let local of monster.locations">{{local.name}}</td>
-            <td *ngFor = "let res of monster.resistances">{{res.element}}</td>
-            <td *ngFor = "let weak of monster.weaknesses">{{weak.element}}</td>
-            <td>{{monster.rewards}}</td>
+            <td><p *ngFor = "let ailment of monster.ailments">{{ailment.description}}</p></td>
+            <td><p *ngFor = "let local of monster.locations">{{local.name}}</p></td>
+            <td><p *ngFor = "let res of monster.resistances">{{res.element}}</p></td>
+            <td><p *ngFor = "let weak of monster.weaknesses">{{weak.element}}</p></td>
+            <td><p *ngFor = "let reward of monster.rewards">{{reward.name}}</p></td>
     </tr>
-</table>
+</table> -->
+<div id="container">
+    <div id="monsterdiv" class="monster" (click) = displayMonster(monster.id) *ngFor = "let monster of monsters; let i = index">
+            <img style="width: 200px; height: 200px;" src="/assets/{{monster.id}}.png"><br>{{monster.name}}
+    </div>
+</div>
