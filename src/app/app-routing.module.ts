@@ -1,9 +1,14 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { MonstermenuComponent } from './components/monstermenu/monstermenu.component';
+import { SpecificmonsterComponent } from './components/specificmonster/specificmonster.component';
 
 
-const routes: Routes = [];
+const routes: Routes = [
+   {path :"monster", component :SpecificmonsterComponent},
+   {path :"", component :MonstermenuComponent},
+
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

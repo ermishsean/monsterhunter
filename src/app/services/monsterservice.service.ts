@@ -9,7 +9,10 @@ export class MonsterserviceService {
 
   constructor(private http:HttpClient) { }
 
-  getMonesterById(id:number):Promise<Monster[]>{
+  getMonster():Promise<Monster[]>{
     return this.http.get<Monster[]>("https://mhw-db.com/monsters").toPromise();
+  }
+  getMonsterbyId(id:number):Promise<Monster[]>{
+    return this.http.get<Monster[]>("https://mhw-db.com/monsters/" + id).toPromise();
   }
 }
