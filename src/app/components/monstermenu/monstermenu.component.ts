@@ -13,7 +13,7 @@ export class MonstermenuComponent implements OnInit {
 
   ngOnInit() {
     this.monsterservice.getMonesterById(1).then((response)=>{
-      console.log(response);
+     // console.log(response);
       this.monsters = response;
     });
   }

@@ -5,11 +5,13 @@ import {HttpClientModule} from '@angular/common/http'
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { MonstermenuComponent } from './components/monstermenu/monstermenu.component';
+import { YoutubeComponent } from './components/youtube/youtube.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    MonstermenuComponent
+    MonstermenuComponent,
+    YoutubeComponent
   ],
   imports: [
     BrowserModule,
